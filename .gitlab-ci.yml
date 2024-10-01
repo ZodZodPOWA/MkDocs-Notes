@@ -1,0 +1,26 @@
+image: python:3.12
+stages:
+  - echo
+  - execute
+
+echo_job:
+  stage: echo
+  script:
+    - echo "print('www')" > hello.py
+    - mkdir public 
+    - echo "<!DOCTYPE html><html lang="en"><head><title>Document</title></head><body><h1>David T moche sauf yann</h1></body></html>" > index.html
+    - cp index.html public
+  artifacts:
+    paths:
+      - hello.py
+      - public/
+
+pages:
+  stage: execute
+  script:     
+    - echo "En marche"
+  artifacts:
+    paths:
+      - public/
+
+
