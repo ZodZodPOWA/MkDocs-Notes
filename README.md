@@ -1,7 +1,6 @@
 # Création et publication de MkDocs/GitLab
 
 **Date :** `01/10/2024`  
-**Auteur :** `David Pereira`
 
 ---
 
